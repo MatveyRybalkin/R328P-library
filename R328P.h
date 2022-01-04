@@ -547,11 +547,11 @@ unsigned short ReadAnalog(char ADCchannel) {
 #define A5 5
 
 //Input Digital Read
-#define ReadB(a) (((*(volatile char *)((0x03) + 0x20)) & 1 << 1)!=0)
+#define ReadB(a) (((*(volatile char *)((0x03) + 0x20)) & 1 << a)!=0)
 
-#define ReadC(a) (((*(volatile char *)((0x06) + 0x20)) & 1 << 1)!=0)
+#define ReadC(a) (((*(volatile char *)((0x06) + 0x20)) & 1 << a)!=0)
 
-#define ReadD(a) (((*(volatile char *)((0x09) + 0x20)) & 1 << 1)!=0)
+#define ReadD(a) (((*(volatile char *)((0x09) + 0x20)) & 1 << a)!=0)
 
 
 //IO Types
